@@ -1,0 +1,13 @@
+{
+  "name": "game-kit",
+  "private": true,
+  "description": "Pruebas del kit de juegos (Playwright). El kit en sí no necesita Node para jugarse: solo Python para montar.",
+  "scripts": {
+    "test": "playwright test",
+    "test:movil": "playwright test --project=movil",
+    "test:escritorio": "playwright test --project=escritorio"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1"
+  }
+}

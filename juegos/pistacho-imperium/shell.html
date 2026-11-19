@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pistacho Imperium · demo de Landbot</title>
+<!-- favicon: un pistacho (favicon.svg), incrustado para que el juego siga siendo un solo HTML -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%231D2B22%22/%3E%3Cg transform=%22rotate(-24 32 32)%22%3E%3Cpath d=%22M32 3C45 14 55 32 50 47C47 59 17 59 14 47C9 32 19 14 32 3Z%22 fill=%22%23E9D6AE%22/%3E%3Cpath d=%22M32 12C42 21 48 34 44 44C42 51 22 51 20 44C16 34 22 21 32 12Z%22 fill=%22%238DB255%22/%3E%3Cpath d=%22M32 3V15%22 stroke=%22%231D2B22%22 stroke-width=%224.5%22 stroke-linecap=%22round%22/%3E%3Cellipse cx=%2227%22 cy=%2232%22 rx=%223.2%22 ry=%227%22 fill=%22%23F3F5EC%22 opacity=%22.5%22/%3E%3C/g%3E%3C/svg%3E">
+<meta name="theme-color" content="#F3F5EC">
+<!--@@FONTS@@-->
+<style>/*@@CORE_CSS@@*/</style>
+<style>/*@@GAME_CSS@@*/</style>
+</head>
+<body>
+<canvas id="c" aria-label="Mapa esquemático de España con sus 17 comunidades autónomas, Ceuta y Melilla como territorios"></canvas>
+<header class="top"><p class="brand">Vergel<b>®</b> <small>demo de Landbot</small></p><span class="topbtns"><button class="iconbtn txt" id="lang" aria-label="Play in English">EN</button><button class="iconbtn txt" id="reset">Reiniciar</button><button class="iconbtn txt" id="mute" aria-pressed="false">Sonido: sí</button><button class="iconbtn" id="help" aria-label="Cómo se juega">?</button></span></header>
+<div class="dock"><div id="say" aria-live="polite"></div></div>
+<aside id="end" hidden aria-live="polite"></aside>
+<div id="intro" hidden></div>
+<div id="banner" aria-live="assertive"></div>
+<div id="ol" hidden aria-live="assertive"></div>
+<div id="coach" hidden><div class="spot"></div><div class="tip" role="dialog" aria-live="polite"></div></div>
+<div id="bubble" hidden></div>
+<div id="lbchat" hidden role="dialog" aria-modal="true" aria-label="Chat de cierre de Pistacho Imperium"><div class="lbbox"><div class="lbhead"><p class="brand">Vergel<b>®</b></p><button class="iconbtn txt" id="closeChat">Volver al juego</button></div><div class="lbframe"></div></div></div>
+<nav id="kb" aria-label="Territorios, para jugar con teclado"></nav>
+<script>/*@@THREE@@*/</script>
+<script>/*@@CORE@@*/</script>
+<script>/*@@GAME@@*/</script>
+</body>
+</html>

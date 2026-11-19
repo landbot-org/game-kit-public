@@ -1,0 +1,93 @@
+/* Pistacho Imperium: tokens de la marca inventada Vergel y piezas propias del juego. */
+:root {
+  --bg: #F3F5EC; --panel: #FBFCF7; --panel-2: #E9EEDD; --panel-3: #DFE6CF;
+  --text: #1D2B22; --dim: #4B5A4F; --faint: #66756A; --soft: #334139;
+  --accent: #8DB255; --accent-dim: rgba(141,178,85,.35); --on-accent: #1D2B22;
+  --red: #E5484D; --violeta: #3E2C5B;
+  --line: rgba(36,28,27,.12); --line-strong: rgba(36,28,27,.25);
+  --sans: "Jost", system-ui, sans-serif; --mono: "Montserrat", system-ui, sans-serif;
+  --me: #8DB255; --me-ink: #1D2B22; --rv: #3E2C5B; --rv-ink: #F3F5EC;
+}
+.brand { font: 700 18px var(--mono); letter-spacing: -.02em; } .brand b { color: var(--text); font-size: 12px; vertical-align: super; }
+.brand small { display: inline-block; margin-left: 8px; padding: 2px 8px; border: 1px solid var(--line-strong); border-radius: 999px; font: 600 10px var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--dim); vertical-align: middle; }
+.turn.dim { color: var(--dim); }
+#intro { background: rgba(36,28,27,.72); }
+.card-box h2 { font-weight: 700; }
+.btn.primary { background: var(--accent); border-color: var(--text); border-width: 2px; }
+.btn { box-shadow: 0 2px 6px rgba(36,28,27,.14); }
+.btn:active { transform: translateY(1px); box-shadow: none; }
+#end, #say, #ol, .card-box { border: 1.5px solid var(--line-strong); box-shadow: 0 12px 32px rgba(36,28,27,.16); }
+.cta { border: 1.5px solid var(--line-strong); background: var(--accent-dim); }
+.q b, .cnt b { font-family: var(--mono); }
+.hl b, .hr b { color: inherit; margin: 0; }
+.q { font-weight: 500; }
+.hl { display: inline-block; padding: 0 6px; border-radius: 6px; background: var(--me); color: var(--me-ink); font-weight: 700; }
+.hr { display: inline-block; padding: 0 6px; border-radius: 6px; background: var(--rv); color: var(--rv-ink); font-weight: 700; }
+
+/* Elegir equipo en la intro */
+.teams { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0 0; }
+.team { min-height: 56px; padding: 8px 10px; border: 2px solid var(--line-strong); background: var(--panel); font: 600 14px/1.2 var(--mono); text-align: left; display: flex; align-items: center; gap: 10px; }
+.team i { width: 22px; height: 22px; flex: none; border: 2px solid var(--text); }
+.team[data-team="es"] i { background: #8DB255; border-radius: 50%; }
+.team[data-team="ca"] i { background: #3E2C5B; transform: rotate(45deg) scale(.8); }
+.team[aria-checked="true"] { border-color: var(--text); background: var(--accent-dim); }
+
+/* Dados en la tarjeta central: pares ordenados, y quién gana cada par */
+.pairs { display: grid; gap: 8px; margin: 12px 0 4px; }
+.pair { display: grid; grid-template-columns: 52px 1fr 52px; align-items: center; gap: 8px; text-align: center; }
+.pair em { font: 600 13px/1.25 var(--mono); font-style: normal; color: var(--dim); }
+.pair.extra .die { opacity: .35; }
+.die { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 10px; border: 2px solid var(--text); font: 700 26px var(--mono); }
+.die.a { background: var(--atk); color: var(--atk-ink); } .die.d { background: var(--dfn); color: var(--dfn-ink); }
+.die.w { box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--text); }
+.die.l { opacity: .55; }
+.dicehead { display: grid; grid-template-columns: 52px 1fr 52px; gap: 8px; margin-top: 10px; font: 600 13px var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--dim); }
+.dicehead span:nth-child(2) { text-align: center; }
+.ol-a.show.good { background: var(--accent-dim); } .ol-a.show.bad { background: rgba(251,74,74,.22); }
+.fact { margin: var(--s3) 0 0; padding: var(--s3); border-radius: var(--r-md); background: var(--panel-2); }
+.fact p { margin: 0 0 4px; } .fact .src { font: 500 13px var(--mono); color: var(--dim); }
+@media (max-width: 900px) { .brand small { display: none; } .pair { grid-template-columns: 48px 1fr 48px; } .die { width: 44px; height: 44px; font-size: 24px; } }
+
+/* Leyenda de zonas (cada zona con su bonus) */
+.zl { display: flex; flex-wrap: wrap; gap: 4px 6px; margin: 6px 0 0; }
+.zc { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border: 1.5px solid var(--text); border-radius: 999px; font: 600 13px var(--mono); color: var(--text); background: color-mix(in srgb, var(--zc) 55%, white); }
+
+.rv h3 { font-size: 1.15rem; }
+
+/* Lista de territorios para teclado y lectores: fuera de vista hasta recibir el foco */
+#kb { position: fixed; left: 0; top: 0; z-index: 30; width: 1px; height: 1px; overflow: hidden; }
+#kb button { position: absolute; left: 0; top: 0; width: 1px; height: 1px; opacity: 0; padding: 0; border: 0; }
+#kb button:focus { position: fixed; left: 16px; top: 72px; width: min(360px, calc(100vw - 32px)); height: auto; min-height: 44px; padding: 8px 12px; opacity: 1; background: var(--panel); border: 2px solid var(--text); border-radius: var(--r-md); font: 600 14px/1.3 var(--sans); text-align: left; }
+.brand small { font-size: 12px; }
+::selection { background: var(--accent); color: var(--text); }
+
+/* Interfaz centrada y pegada al borde, igual en móvil y en escritorio: barra arriba, mapa en medio, panel abajo.
+   Nada flota: la barra y el panel son superficies, no botones sueltos sobre el mapa. */
+.btn, .btn.primary, .iconbtn, .team { box-shadow: none; }
+.btn:active { transform: translateY(1px); }
+#say, #end { box-shadow: 0 -6px 20px rgba(36,28,27,.08); }
+
+/* Chat de cierre (Landbot) */
+#lbchat { position: fixed; inset: 0; z-index: 30; display: flex; align-items: center; justify-content: center; padding: var(--s3); background: rgba(36,28,27,.72); }
+#lbchat[hidden] { display: none; }
+.lbbox { display: flex; flex-direction: column; width: min(440px, 100%); height: min(680px, 100%); background: var(--bg); border: 1.5px solid var(--line-strong); border-radius: 16px; overflow: hidden; }
+.lbhead { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-bottom: 1.5px solid var(--line-strong); }
+.lbframe { flex: 1; position: relative; min-height: 0; } .lbcont { position: absolute; inset: 0; }
+.lbwait, .lbfail { margin: 24px 16px; color: var(--dim); } .lbfail p { margin: 0 0 10px; color: var(--text); }
+@media (max-width: 900px) { #lbchat { padding: 0; } .lbbox { width: 100%; height: 100%; border-radius: 0; border: 0; } .lbhead { padding-top: max(10px, env(safe-area-inset-top)); } }
+#reset.armed { background: var(--red); border-color: var(--text); color: var(--text); font-weight: 700; }
+
+/* Premio del 5 %: visible en el título, en el panel y en el final */
+.prize { display: flex; align-items: center; gap: 12px; margin: 12px 0 0; padding: 10px 12px; border: 1.5px dashed var(--text); border-radius: var(--r-md); background: var(--accent-dim); }
+.prize b, .ticket .pct { flex: none; display: inline-flex; align-items: center; justify-content: center; min-width: 64px; padding: 6px 10px; border-radius: 999px; background: var(--text); color: var(--bg); font: 700 20px var(--mono); }
+.prize span { font-size: 15px; line-height: 1.3; }
+.prizeline b { color: var(--text); }
+.ticket { display: flex; align-items: center; gap: 14px; margin: var(--s3) 0 0; padding: 14px; border: 2px dashed var(--text); border-radius: var(--r-md); background: var(--accent-dim); }
+.ticket p { margin: 0 0 4px; } .ticket .src { font: 500 13px var(--mono); color: var(--dim); }
+.ticket .pct { font-size: 26px; min-width: 88px; padding: 12px 14px; }
+.ticket.off { background: var(--panel-2); border-color: var(--line-strong); } .ticket.off .pct { background: var(--dim); }
+.cta-btn { flex-direction: column; align-items: flex-start; gap: 2px; min-height: 56px; padding: 10px 18px; text-align: left; }
+.cta-btn b { font-size: 1.1rem; } .cta-btn small { font: 500 14px var(--sans); opacity: .85; }
+
+.langsw{display:flex;gap:8px;justify-content:center;margin:12px 0 0}
+.langsw .btn[aria-pressed="true"]{background:var(--ink,#1D2B22);color:var(--bg,#F3F5EC)}

@@ -1,0 +1,81 @@
+/* lb-style: vergel 2026-11-12 */
+/* Vergel, marca inventada para una demo: verde pistacho #8DB255, tinta #1D2B22, violeta #3E2C5B, rojo #E5484D. */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Montserrat:wght@600;700&display=swap');
+
+:root {
+  --background:#F3F5EC !important;
+  --select-content-background:#FBFCF7 !important;
+  --select-item-background-default:#FBFCF7 !important;
+  --foreground:#1D2B22 !important;
+  --muted:#4B5A4F !important;
+  --muted-foreground:#334139 !important;
+  --select-item-color-default:#1D2B22 !important;
+  --select-item-background-hover:#E9EEDD !important;
+  --border:#CBD3BC !important;
+  --select-content-border:#CBD3BC !important;
+  --button-color-primary-default:#8DB255 !important;
+  --button-border-color-primary-default:#1D2B22 !important;
+  --button-font-color-primary-default:#1D2B22 !important;
+  --select-trigger-border-focus:#1D2B22 !important;
+  --select-item-color-selected:#1D2B22 !important;
+  --select-item-background-selected:#8DB255 !important;
+  --calendar-day-color-default:#1D2B22 !important;
+  --calendar-header-color:#1D2B22 !important;
+  --calendar-day-color-outside:#66756A !important;
+  --calendar-day-color-disabled:#9AA593 !important;
+  --calendar-day-bg-hover:#E9EEDD !important;
+  --calendar-day-bg-today:#E9EEDD !important;
+  --calendar-day-bg-selected:#8DB255 !important;
+  --calendar-day-color-selected:#1D2B22 !important;
+  --calendar-day-color-today:#3E2C5B !important;
+  --chat-bubble-color-font-bot:#1D2B22 !important;
+  --chat-bubble-surface-user:#3E2C5B !important;
+  --chat-bubble-border-color-user:#3E2C5B !important;
+  --chat-bubble-color-font-user:#F3F5EC !important;
+  --input-background-default:#FBFCF7 !important;
+  --textarea-background-default:#FBFCF7 !important;
+  --select-trigger-background-default:#FBFCF7 !important;
+  --input-border-color-default:#1D2B22 !important;
+  --textarea-border-color-default:#1D2B22 !important;
+  --select-trigger-border-default:#1D2B22 !important;
+  --input-color-text-default:#1D2B22 !important;
+  --textarea-color-text-default:#1D2B22 !important;
+  --select-trigger-color-value:#1D2B22 !important;
+  --select-trigger-color-placeholder:#66756A !important;
+  --web-chat-header-background:#F3F5EC !important;
+  --web-chat-header-text-color:#1D2B22 !important;
+  --font-family-sans:"Jost", system-ui, sans-serif !important;
+}
+
+[data-lb-part="message-text"] { font-family:"Jost", system-ui, sans-serif; font-size:16px; line-height:1.4; }
+[data-lb-part="message"][data-lb-author="bot"] [data-lb-part="message-bubble"] {
+  background:#FBFCF7; color:#1D2B22; border:1.5px solid #CBD3BC; border-radius:12px; padding:12px 14px;
+}
+[data-lb-part="message"][data-lb-author="user"] [data-lb-part="message-bubble"] { border-radius:12px; }
+[data-lb-part="message-text"] a { color:#3E2C5B; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+[data-lb-part="options-prompt"] { color:#1D2B22; font-family:"Montserrat", system-ui, sans-serif; font-weight:700; }
+[data-lb-part="option-button"] {
+  background:#8DB255; color:#1D2B22; border:2px solid #1D2B22; border-radius:8px; font-family:"Jost", system-ui, sans-serif; font-weight:700; font-size:16px; padding:12px 16px; margin-bottom:8px; box-shadow:none;
+}
+[data-lb-part="option-button"]:hover { background:#7FA248; color:#1D2B22; }
+[data-lb-part="option-button"]:active { transform:translateY(1px); }
+[data-lb-part="options-group"],[data-lb-part="date-picker"],[data-lb-part="calendly"],[data-lb-part="takeover"] { background:#FBFCF7; border:1.5px solid #CBD3BC; border-radius:12px; }
+[data-lb-part="input-field"],[data-lb-part="free-text"] { background:#FBFCF7; border:1.5px solid #1D2B22; border-radius:8px; }
+[data-lb-part="text-input"][data-lb-state="active"] [data-lb-part="input-field"] { border:2px solid #1D2B22; }
+[data-lb-part="text-input"][data-lb-state="error"] [data-lb-part="input-field"] { border:2px solid #E5484D; }
+[data-lb-part="input-error"] { color:#B42323; }
+[data-lb-part="input-submit"] { background:#8DB255; color:#1D2B22; border-radius:8px; }
+[data-lb-part="input-submit"]:hover { background:#7FA248; }
+[data-lb-part="options-search"] { background:#FBFCF7; border-radius:8px; }
+[data-lb-part="media-caption"] { color:#4B5A4F; }
+[data-lb-part="media-download"] { color:#3E2C5B; }
+[data-lb-part="window"] { border:1.5px solid #CBD3BC; }
+[data-lb-part="header"] { border-bottom:1.5px solid #1D2B22; font-family:"Montserrat", system-ui, sans-serif; font-weight:700; }
+[data-lb-part="message-timestamp"] { color:#66756A; }
+[data-lb-part="branding"] { color:#66756A; }
+
+* { scrollbar-width: thin; scrollbar-color: #B7C0A8 transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background: #B7C0A8; border-radius: 8px; }
+*::-webkit-scrollbar-thumb:hover { background: #9AA593; }

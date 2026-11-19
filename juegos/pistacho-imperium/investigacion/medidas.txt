@@ -1,0 +1,15 @@
+Jugador (fila) contra robot (columna): % de victorias del jugador. Entre paréntesis, turnos totales medios.
+
+Empieza el JUGADOR (el robot recibe +1 plantón)
+          robot agresivo  robot medio     robot cauto     
+agresivo  52% (8.7)       55% (9.6)       62% (10.8)      
+medio     43% (10.0)      48% (10.9)      57% (12.6)      
+cauto     36% (11.2)      40% (12.8)      49% (14.0)      
+flojo     29% (12.3)      31% (13.0)      38% (14.9)      
+
+Empieza el ROBOT (el jugador recibe +1 plantón)
+          robot agresivo  robot medio     robot cauto     
+agresivo  47% (8.3)       54% (10.0)      62% (11.4)      
+medio     43% (9.9)       49% (11.3)      58% (12.5)      
+cauto     39% (10.9)      47% (12.6)      50% (14.0)      
+flojo     32% (10.9)      38% (13.0)      45% (14.9)      
